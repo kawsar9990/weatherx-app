@@ -382,7 +382,7 @@ const fetchWeather = async (city: string) => {
     ).json();
 
     if (!geo.results?.length) {
-      errorMessage.value = `"${city}" namer kono city paoa jayni. Sothik banan diye abar chesta korun!`;
+      errorMessage.value = `No city named "${city}" was found. Please check the spelling and try again!`
       return;
     }
     const { latitude, longitude, name, country } = geo.results[0];
